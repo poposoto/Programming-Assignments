@@ -1,7 +1,9 @@
+/* Step 1: 导入头文件+宏定义 */
 #include <stdio.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
+/* Step 2: 按书p.75实现复化梯形数值积分算法 */
 void trapezium(double LowerBound, double UpperBound, auto integrand)
 {
 	int n = 1, i;
@@ -24,6 +26,7 @@ void trapezium(double LowerBound, double UpperBound, auto integrand)
 	printf("T2n = %.16f, n = %d\n", T_new, n);
 }
 
+/* Step 3: 按书p.76实现复化抛物线数值积分算法 */
 void parabola(double LowerBound, double UpperBound, auto integrand)
 {
 	int n = 2, i;
@@ -51,6 +54,7 @@ void parabola(double LowerBound, double UpperBound, auto integrand)
 	printf("S2n = %.16f, n = %d\n", S_new, n);
 }
 
+/* Step 4: 分别将题给三个被积函数及相应的积分区间代入上述算法 */
 int main(int argc, char *argv[])
 {
 	printf("x -> sin(x) / x from 1 to 2\n");
